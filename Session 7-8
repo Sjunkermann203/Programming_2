@@ -1,0 +1,39 @@
+#Flip a string using while
+text = "abcdefghijkl"
+i = 0
+while i < len(text):
+    print(text[len(text)-1-i])
+    i += 1
+
+#Slicing
+base = "abcdefghijklmnopqrstuvwxyz"
+print("Here are a few slices")
+print(base[0:3])
+print(base[0:5])
+print(base[10:]) # All the way till the end
+print(base[:10]) # All the way from the beginning
+print(base[:]) # The whole string
+print(base[::2]) # every other letter
+print(base[5:10:15]) # Every third letter from the 5th to the 15th
+print(base[::-1]) 
+
+text = "abcdefg"
+print(dir(text))
+help(text.isidentifier)
+print(text.isidentifier()) #Is abcdefg a valid identifier
+print("1234".isidentifier()) #Is 1234 a valid identifier
+print("anananananananananananana".count("ana"))
+print("anananananananananananana".replace("ana", "bob"))
+print("anananananananananananana".replace("ana", "bob").count("bob"))
+print("anananananananananananana".find("ana", 1))
+print("bbbbbabbbbbabbbbabbbabb".split("a"))
+print("this is a sentence and I want the words".split(" "))
+sentence = "Hello, kind-sir; how may! I be of service today?"
+punctuation = ",-;!?"
+# sanitize the sentence
+for p in punctuation:
+    sentence = sentence.replace(p," ") # replace punctuation with nothing
+print(sentence)
+# split the sentence into words
+words = sentence.split(" ")
+print(words)
