@@ -1,0 +1,30 @@
+import random
+
+class Point:
+    #all classes need to have an init method
+    def __init__(self, x, y):
+        """
+        Init method that initializes the point with X and Y
+        :param x: X coordinate value
+        :param y: Y coordinate value
+        """
+        self.x = x
+        self.y = y
+a = Point(2, 3) #Instantiate by calling the name of the class and parameters in brackets
+
+print(a.x)
+print(a.y)
+
+b = Point(7,9)
+print(b.x, b.y)
+
+#Add 5 random points into a list
+points = []
+for i in range(5):
+    x = random.randint(0,100)
+    y =  random.randint(0,100)
+    points.append(Point(x,y))
+
+for _ in range(5):
+    points.append(Point(random.randint(0,100), random.randint(0,100)))
+
